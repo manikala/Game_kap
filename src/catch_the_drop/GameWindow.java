@@ -13,18 +13,28 @@ public class GameWindow extends JFrame {
         game_window.setLocation(200, 100);
         game_window.setSize(906,478);
         game_window.setResizable(false);
+        GameField game_field = new GameField();
+        game_window.add(game_field);
         game_window.setVisible(true);
 
     }
 
     private static void onRepaint(Graphics g){
+      //  g.fillOval(10, 10, 200, 100);
+        g.drawLine(100,100, 200, 200);
 
     }
 
 
     private static class GameField extends JPanel {
 
+        @Override
+        protected void painComponent (Graphics g) {
+            super.paintComponent(g);
+            onRepaint(g);
 
+
+        }
     }
 
 }
