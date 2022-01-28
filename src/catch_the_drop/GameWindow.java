@@ -1,13 +1,21 @@
 package catch_the_drop;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class GameWindow extends JFrame {
 
     private static GameWindow game_window;
+    private static Image background;
+    private static Image game_over;
+    private static Image drop;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        background = ImageIO.read(GameWindow.class.getResourceAsStream("background.png"));
+        background = ImageIO.read(GameWindow.class.getResourceAsStream("drop.png"));
+        background = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.png"));
         game_window = new GameWindow();
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         game_window.setLocation(200, 100);
