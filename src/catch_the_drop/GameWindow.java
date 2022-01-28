@@ -13,7 +13,7 @@ public class GameWindow extends JFrame {
     private static Image game_over;
     private static Image drop;
     private static float drop_left = 200;
-    private static float drop_top = 200;
+    private static float drop_top = -100;
     private static float drop_v = 200;
 
     public static void main(String[] args) throws IOException {
