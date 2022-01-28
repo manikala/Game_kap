@@ -20,8 +20,8 @@ public class GameWindow extends JFrame {
     }
 
     private static void onRepaint(Graphics g){
-      //  g.fillOval(10, 10, 200, 100);
-        g.drawLine(100,100, 200, 200);
+        g.fillOval(10, 10, 200, 100);
+        g.drawLine(150,150, 400, 300);
 
     }
 
@@ -29,7 +29,7 @@ public class GameWindow extends JFrame {
     private static class GameField extends JPanel {
 
         @Override
-        protected void painComponent (Graphics g) {
+        protected void paintComponent (Graphics g) {
             super.paintComponent(g);
             onRepaint(g);
 
