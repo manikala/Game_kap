@@ -14,8 +14,8 @@ public class GameWindow extends JFrame {
 
     public static void main(String[] args) throws IOException {
         background = ImageIO.read(GameWindow.class.getResourceAsStream("background.png"));
-        background = ImageIO.read(GameWindow.class.getResourceAsStream("drop.png"));
-        background = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.png"));
+        drop = ImageIO.read(GameWindow.class.getResourceAsStream("drop.png"));
+        game_over = ImageIO.read(GameWindow.class.getResourceAsStream("game_over.png"));
         game_window = new GameWindow();
         game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         game_window.setLocation(200, 100);
@@ -28,11 +28,11 @@ public class GameWindow extends JFrame {
     }
 
     private static void onRepaint(Graphics g){
-        g.fillOval(10, 10, 200, 100);
-        g.drawLine(150,150, 400, 300);
+        g.drawImage(background, 0, 0, null);
+        g.drawImage(drop, 100, 100, null);
+        g.drawImage(game_over, 280, 120, null);
 
     }
-
 
     private static class GameField extends JPanel {
 
@@ -40,7 +40,6 @@ public class GameWindow extends JFrame {
         protected void paintComponent (Graphics g) {
             super.paintComponent(g);
             onRepaint(g);
-
 
         }
     }
