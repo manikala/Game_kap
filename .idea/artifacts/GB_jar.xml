@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GB:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GB_jar</output-path>
+    <root id="archive" name="GB.jar">
+      <element id="module-output" name="GB" />
+    </root>
+  </artifact>
+</component>
